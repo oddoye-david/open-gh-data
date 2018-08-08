@@ -1,25 +1,24 @@
 import mongoose, { Schema } from 'mongoose';
 import Joi from 'joi';
 
-const RegionSchema = new Schema(
-  {
-    name: {
-      type: String,
-    },
-    capital: {
-      type: String,
-    },
-    area: {
-      type: Number,
-    },
-    population: {
-      type: Number,
-    },
+const RegionSchema = new Schema({
+  name: {
+    type: String,
   },
-  {
-    timestamps: true,
+  capital: {
+    type: String,
   },
-);
+  area: {
+    type: Number,
+  },
+  population: {
+    type: Number,
+  },
+  ref: {
+    type: String,
+    unique: true,
+  },
+});
 
 const RegionModel = mongoose.model('Regions', RegionSchema);
 

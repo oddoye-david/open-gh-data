@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Ashanti",
+    "ref": "ashanti",
+    "capital": "Kumasi",
+    "area": "24889",
+    "population": "4780380"
+  },
+  {
+    "name": "Brong-Ahafo",
+    "ref": "brong-ahafo",
+    "capital": "Sunyani",
+    "area": "39557",
+    "population": "2310983"
+  },
+  {
+    "name": "Greater Accra",
+    "ref": "greater-accra",
+    "capital": "Accra",
+    "area": "3245",
+    "population": "4010054"
+  },
+  {
+    "name": "Central",
+    "ref": "central",
+    "capital": "Cape Coast",
+    "area": "9826",
+    "population": "2201863"
+  },
+  {
+    "name": "Eastern",
+    "ref": "eastern",
+    "capital": "Koforidua",
+    "area": "19323",
+    "population": "2633154"
+  },
+  {
+    "name": "Northern",
+    "ref": "nothern",
+    "capital": "Tamale",
+    "area": "70384",
+    "population": "2479461"
+  },
+  {
+    "name": "Western",
+    "ref": "western",
+    "capital": "Sekondi-Takoradi  ",
+    "area": "23921",
+    "population": "2376021"
+  },
+  {
+    "name": "Upper East",
+    "ref": "upper-east",
+    "capital": "Bolgatanga",
+    "area": "8842",
+    "population": "1046545"
+  },
+  {
+    "name": "Upper West",
+    "ref": "upper-west",
+    "capital": "Wa",
+    "area": "18476",
+    "population": "702110"
+  },
+  {
+    "name": "Volta",
+    "ref": "volta",
+    "capital": "Ho",
+    "area": "20570",
+    "population": "2118252"
+  }
+]
