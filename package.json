@@ -1,0 +1,60 @@
+{
+  "name": "open-gh-data",
+  "version": "1.0.0",
+  "description": "Ghana Open Data",
+  "main": "./dist/app.js",
+  "scripts": {
+    "start": "node ./dist/app.js",
+    "dev": "nodemon --exec babel-node ./src/app.js",
+    "build": "rimraf ./dist && babel ./src -d ./dist",
+    "heroku-postbuild": "npm run build",
+    "test": "NODE_ENV=test && jest",
+    "test:watch": "NODE_ENV=test && jest --watch",
+    "test:routes": "NODE_ENV=test && jest --testPathPattern route",
+    "test:services": "NODE_ENV=test && jest --testPathPattern service"
+  },
+  "keywords": [
+    "Open Data",
+    "Ghana"
+  ],
+  "author": "David Oddoye <oddoyedavid@gmail.com> (oddoye.com)",
+  "license": "ISC",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "boom": "^7.2.0",
+    "dotenv": "^6.0.0",
+    "glob": "^7.1.2",
+    "hapi": "^17.5.3",
+    "hapi-swagger": "^9.1.1",
+    "inert": "^5.1.0",
+    "joi": "^13.5.2",
+    "lodash.flattendeep": "^4.4.0",
+    "mongoose": "^5.2.6",
+    "vision": "^5.3.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^23.4.2",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "jest": "^23.4.2",
+    "mockgoose": "^7.3.5",
+    "nodemon": "^1.18.3",
+    "rimraf": "^2.6.2",
+    "supertest": "^3.1.0"
+  },
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "testPathIgnorePatterns": [
+      "<rootDir>/dist/",
+      "<rootDir>/node_modules/"
+    ]
+  },
+  "engines": {
+    "node": "10.0.0"
+  }
+}

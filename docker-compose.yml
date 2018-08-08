@@ -1,0 +1,21 @@
+version: "2"
+services:
+  app:
+    container_name: app
+    restart: always
+    build: .
+    ports:
+      - "3000:3000"
+    links:
+      - mongo
+    depends_on:
+      - mongo
+    environment:
+      - NODE_ENV=production
+      - MONGO_URI=mongodb://mongo:27017/open-gh-data
+      - PORT=3000
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - "27017:27017"

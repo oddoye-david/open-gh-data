@@ -1,0 +1,12 @@
+{
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "extends": "airbnb-base",
+  "rules": {
+    "no-console": "off",
+    "no-param-reassign": "off",
+    "import/prefer-default-export": "off"
+  }
+}
