@@ -6,13 +6,22 @@ const RegionSchema = new Schema(
     name: {
       type: String,
     },
+    capital: {
+      type: String,
+    },
+    area: {
+      type: Number,
+    },
+    population: {
+      type: Number,
+    },
   },
   {
     timestamps: true,
   },
 );
 
-const model = mongoose.model('Regions', RegionSchema);
+const RegionModel = mongoose.model('Regions', RegionSchema);
 
 export const validators = {
   region: Joi.object({
@@ -20,4 +29,4 @@ export const validators = {
   }),
 };
 
-export default model;
+export default RegionModel;

@@ -1,6 +1,6 @@
 import Service from '../../utils/service';
-import ServiceModel from './region.model';
+import RegionModel from './region.model';
 
-const RegionService = new Service(ServiceModel);
+const RegionService = new Service(RegionModel);
 
 export default RegionService;
