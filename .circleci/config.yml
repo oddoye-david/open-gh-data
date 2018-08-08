@@ -46,7 +46,7 @@ jobs:
       # run tests!
       - run: npm test
 
-      - run: ./cc-test-reporter after-build --exit-code $EXIT_CODE
+      - run: ./cc-test-reporter after-build --exit-code 0
 
   deploy:
     docker:
