@@ -36,17 +36,17 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run:
-        name: Setup Code Climate test-reporter
-        command: |
-          curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-          chmod +x ./cc-test-reporter
+          name: Setup Code Climate test-reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
 
       # run tests!
       - run: npm test
 
       - run:
-        name: Send Test coverage to Codeclimate
-        command: CODECLIMATE_REPO_TOKEN=$CODECLIMATE_API_KEY codeclimate-test-reporter < coverage/lcov.info
+          name: Send Test coverage to Codeclimate
+          command: CODECLIMATE_REPO_TOKEN=$CODECLIMATE_API_KEY codeclimate-test-reporter < coverage/lcov.info
   deploy:
     docker:
       - image: buildpack-deps:trusty
