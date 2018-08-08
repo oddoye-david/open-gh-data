@@ -41,12 +41,13 @@ jobs:
             curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
             chmod +x ./cc-test-reporter
 
+      - run: ./cc-test-reporter before-build
+
       # run tests!
       - run: npm test
 
-      - run:
-          name: Send Test coverage to Codeclimate
-          command: CODECLIMATE_REPO_TOKEN=$CODECLIMATE_API_KEY ./cc-test-reporter < coverage/lcov.info
+      - run: ./cc-test-reporter after-build --exit-code $EXIT_CODE
+
   deploy:
     docker:
       - image: buildpack-deps:trusty
