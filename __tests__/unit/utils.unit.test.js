@@ -1,4 +1,4 @@
-import { removeFields, capitalize } from '../../src/utils/index';
+import { removeFields, capitalize } from '../../src/utils';
 
 describe('Utils tests', () => {
   describe('removeFields tests', () => {

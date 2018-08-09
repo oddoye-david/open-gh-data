@@ -1,0 +1,20 @@
+[
+  {
+    "name": "A Constituency",
+    "ref": "a-constituency",
+    "region_ref": "a-region",
+    "district_ref": "a-district"
+  },
+  {
+    "name": "B Constituency",
+    "ref": "b-constituency",
+    "region_ref": "b-region",
+    "district_ref": "b-district"
+  },
+  {
+    "name": "C Constituency",
+    "ref": "c-constituency",
+    "region_ref": "c-region",
+    "district_ref": "c-district"
+  }
+]

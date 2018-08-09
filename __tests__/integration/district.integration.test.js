@@ -21,7 +21,6 @@ describe('District integration tests', () => {
       url: '/api/districts?populateRegion=true',
     });
     expect(response.statusCode).toBe(200);
-    console.log(response.result[0], response.result.length);
     expect(response.result[0].region.name).toBe('A Region');
   });
 

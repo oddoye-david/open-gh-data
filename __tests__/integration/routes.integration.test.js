@@ -2,10 +2,13 @@ import mongoose from 'mongoose';
 import { initializeServer } from '../../src/server';
 import RegionModel from '../../src/entities/region/region.model';
 import DistrictModel from '../../src/entities/district/district.model';
+import ConstituencyModel from '../../src/entities/constituency/constituency.model';
+import { capitalize } from '../../src/utils';
 
 const ENTITIES = [
   { name: 'region', path: 'regions', model: RegionModel },
   { name: 'district', path: 'districts', model: DistrictModel },
+  { name: 'constituency', path: 'constituencies', model: ConstituencyModel },
 ];
 
 describe('API Route tests', () => {
@@ -20,7 +23,7 @@ describe('API Route tests', () => {
   });
 
   ENTITIES.forEach(({ name, path, model: Model }) => {
-    describe(`${name} route tests`, () => {
+    describe(`${capitalize(name)} route tests`, () => {
       it(`should list ${name}`, async () => {
         const response = await testServer.inject({
           method: 'GET',
