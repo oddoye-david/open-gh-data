@@ -7,7 +7,7 @@ The Open Ghana Data project is a collection of endpoints to retrieve json-format
 - [Node](https://nodejs.org/): This project uses `Node v 10.0.0`.
 - [Docker](https://docker.com): For that container goodness
 
-- [MongoDB](https://mongodb.com): Because we're web scale. Lulz.
+- [MongoDB](https://mongodb.com): Because we're web scale. Lolz.
 
 - [Git](https://git-scm.com): We use [Git](https://git-scm.com) and [GitHub](https://github.com) for version control and collaboration.
   If you don't have a [GitHub](https://github.com) account already you can create one [here](https://github.com/join).
@@ -43,3 +43,8 @@ Setup your editor to use the style guide in the `.eslintrc`
 ## TODO
 
 - Git Hooks to lint before push
+
+## Contributors
+
+- Selikeh Gborbidzi [@Selikeh](https://twitter.com/Selikeh)
+- Winston Wotse [@Mr_Wotse](https://twitter.com/Mr_Wotse)
