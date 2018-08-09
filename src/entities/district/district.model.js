@@ -51,6 +51,10 @@ export const validators = {
     capital: Joi.string().required(),
     region: regionValidators.region,
   }),
+  districtWithoutRegion: Joi.object({
+    name: Joi.string().required(),
+    capital: Joi.string().required(),
+  }),
 };
 
 export default DistrictModel;

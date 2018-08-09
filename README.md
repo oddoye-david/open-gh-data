@@ -1,6 +1,6 @@
-# Open Ghana Data &middot; [![Test Coverage](https://api.codeclimate.com/v1/badges/cf4ae28d305976e5704b/test_coverage)](https://codeclimate.com/github/oddoye-david/open-gh-data/test_coverage) [![Maintainability](https://api.codeclimate.com/v1/badges/cf4ae28d305976e5704b/maintainability)](https://codeclimate.com/github/oddoye-david/open-gh-data/maintainability) [![Issues](https://codeclimate.com/github/oddoye-david/open-gh-data/badges/issue_count.svg)](https://codeclimate.com/github/oddoye-david/open-gh-data) [![CircleCI](https://circleci.com/gh/oddoye-david/open-gh-data/tree/master.svg?style=svg)](https://circleci.com/gh/oddoye-david/open-gh-data/tree/master)
+# Open Ghana Data &middot; [![Test Coverage](https://api.codeclimate.com/v1/badges/cf4ae28d305976e5704b/test_coverage)](https://codeclimate.com/github/oddoye-david/open-gh-data) [![CircleCI](https://circleci.com/gh/oddoye-david/open-gh-data/tree/master.svg?style=svg)](https://circleci.com/gh/oddoye-david/open-gh-data/tree/master)
 
-The Open Ghana Data project is a collection of endpoints to retrieve json-formatted data about Ghana.
+The Open Ghana Data project is a collection of endpoints to retrieve json-formatted data about Ghana. Hosted live at [Open Ghana Data](https://open-gh-data.herokuapp.com/documentation)
 
 ## What you need
 
