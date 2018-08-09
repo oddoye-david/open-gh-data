@@ -1,7 +1,7 @@
 import Joi from 'joi';
 import { validators } from './district.model';
 import DistrictService from './district.service';
-import { paginationQueryParams, response, entityId } from '../../utils/validators';
+import { paginationQueryParams, entityId } from '../../utils/validators';
 
 export default [
   {
@@ -20,7 +20,7 @@ export default [
           responses: {
             200: {
               description: 'Success',
-              schema: response(Joi.array().items(validators.district)),
+              schema: Joi.array().items(validators.district),
             },
           },
         },
@@ -51,7 +51,7 @@ export default [
           responses: {
             200: {
               description: 'Success',
-              schema: response(validators.district),
+              schema: validators.district,
             },
           },
         },

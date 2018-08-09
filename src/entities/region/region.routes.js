@@ -1,7 +1,7 @@
 import Joi from 'joi';
 import { validators } from './region.model';
 import RegionService from './region.service';
-import { paginationQueryParams, response, entityId } from '../../utils/validators';
+import { paginationQueryParams, entityId } from '../../utils/validators';
 
 export default [
   {
@@ -20,7 +20,7 @@ export default [
           responses: {
             200: {
               description: 'Success',
-              schema: response(Joi.array().items(validators.region)),
+              schema: Joi.array().items(validators.region),
             },
           },
         },
@@ -47,7 +47,7 @@ export default [
           responses: {
             200: {
               description: 'Success',
-              schema: response(validators.region),
+              schema: validators.region,
             },
           },
         },
