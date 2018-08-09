@@ -1,5 +1,7 @@
 import mongoose, { Schema } from 'mongoose';
 import Joi from 'joi';
+
+import { validators as regionValidators } from '../region/region.model';
 import { removeFields } from '../../utils';
 
 const HIDDEN_FIELDS = ['_id', 'ref', 'region_ref'];
@@ -47,7 +49,7 @@ export const validators = {
   district: Joi.object({
     name: Joi.string().required(),
     capital: Joi.string().required(),
-    region: Joi.object(),
+    region: regionValidators.region,
   }),
 };
 

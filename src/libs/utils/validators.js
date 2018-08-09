@@ -1,8 +1,8 @@
 import Joi from 'joi';
 
 export const paginationQueryParams = extra => Joi.object({
-  limit: Joi.string(),
-  page: Joi.string(),
+  limit: Joi.number().default(10),
+  page: Joi.number().default(1),
   ...extra,
 });
 

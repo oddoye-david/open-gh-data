@@ -3,7 +3,9 @@ export default class Service {
     this.model = model;
   }
 
-  async list(limit, page, populate = []) {
+  async list({
+    limit, page, populate = [], sort = { name: 1 },
+  } = {}) {
     let query = this.model.find({});
 
     if (limit) {
@@ -21,7 +23,7 @@ export default class Service {
       }, query);
     }
 
-    const items = await query.exec();
+    const items = await query.sort(sort).exec();
 
     return items;
   }

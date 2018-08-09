@@ -11,7 +11,7 @@ export default [
       auth: false,
       handler: async (request) => {
         const { limit, page } = request.query;
-        return RegionService.list(limit, page);
+        return RegionService.list({ limit, page });
       },
       description: 'get regions',
       notes: 'This endpoint allows for the retrieval of all regions.',

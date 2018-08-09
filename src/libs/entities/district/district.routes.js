@@ -11,7 +11,7 @@ export default [
       auth: false,
       handler: async (request) => {
         const { limit, page, populateRegion } = request.query;
-        return DistrictService.list(limit, page, populateRegion ? ['region'] : []);
+        return DistrictService.list({ limit, page, populate: populateRegion ? ['region'] : [] });
       },
       description: 'get districts',
       notes: 'This endpoint allows for the retrieval of all districts.',
