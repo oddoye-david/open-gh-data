@@ -7,7 +7,10 @@ describe('Region routes tests', () => {
   let server;
 
   beforeAll(async () => {
-    await mongoose.connect('mongodb://localhost:27017/test-db');
+    await mongoose.connect(
+      'mongodb://localhost:27017/test-db',
+      { useNewUrlParser: true },
+    );
     server = await initializeServer();
     await Region.remove({});
   });
