@@ -1,4 +1,4 @@
-import Service from '../service';
+import Service from '../../src/utils/service';
 
 describe('Service Tests', () => {
   it('Should list all entities', () => {

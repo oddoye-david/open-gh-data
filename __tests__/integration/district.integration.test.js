@@ -1,38 +1,18 @@
 import mongoose from 'mongoose';
 
-import District from '../district.model';
-import Region from '../../region/region.model';
-import { baseRouteTests } from '../../../utils/test-helpers';
-
-const baseTests = baseRouteTests({
-  name: 'district',
-  path: 'districts',
-  model: District,
-});
+import District from '../../src/entities/district/district.model';
+import Region from '../../src/entities/region/region.model';
+import { initializeServer } from '../../src/server';
 
 describe('District integration tests', () => {
+  let testServer;
+
+  beforeAll(async () => {
+    testServer = await initializeServer();
+  });
+
   afterAll(async () => {
     await mongoose.connection.close();
-  });
-
-  it('should list districts', async () => {
-    await baseTests.list();
-  });
-
-  it('should return districts according to limit query param', async () => {
-    await baseTests.listWithLimitParam();
-  });
-
-  it('should return districts according to limit and page query param', async () => {
-    await baseTests.listWithLimitAndPageParam();
-  });
-
-  it('should list a district', async () => {
-    await baseTests.find();
-  });
-
-  it('Should return status 400 if id is invalid', async () => {
-    await baseTests.invalidId();
   });
 
   it('should list districts and populate region', async () => {

@@ -52,10 +52,11 @@
     "verbose": true,
     "testEnvironment": "node",
     "collectCoverage": true,
-    "setupTestFrameworkScriptFile": "<rootDir>src/utils/test-helpers/setup.js",
+    "setupTestFrameworkScriptFile": "<rootDir>/__tests__/setup/setup.js",
     "testPathIgnorePatterns": [
       "<rootDir>/dist/",
-      "<rootDir>/node_modules/"
+      "<rootDir>/node_modules/",
+      "<rootDir>/__tests__/setup/"
     ]
   },
   "engines": {
