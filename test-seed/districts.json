@@ -1,0 +1,17 @@
+[
+  {
+    "name": "A District",
+    "ref": "a-district",
+    "region_ref": "a-region"
+  },
+  {
+    "name": "B District",
+    "ref": "b-district",
+    "region_ref": "b-region"
+  },
+  {
+    "name": "C District",
+    "ref": "c-district",
+    "region_ref": "c-region"
+  }
+]

@@ -9,10 +9,11 @@
     "build": "rimraf ./dist && babel ./src -d ./dist",
     "seed": "seed",
     "heroku-postbuild": "npm run build && npm run seed",
-    "test": "NODE_ENV=test && jest",
-    "test:watch": "NODE_ENV=test && jest --watch",
-    "test:integration": "NODE_ENV=test && jest --testPathPattern integration",
-    "test:unit": "NODE_ENV=test && jest --testPathPattern unit"
+    "seed:test": "seed --seeds-folder test-seed",
+    "test": "cross-env NODE_ENV=test npm run seed:test && jest",
+    "test:watch": "cross-env NODE_ENV=test npm run seed:test && jest --watch",
+    "test:integration": "cross-env NODE_ENV=test npm run seed:test && jest --testPathPattern integration",
+    "test:unit": "cross-env NODE_ENV=test jest --testPathPattern unit"
   },
   "keywords": [
     "Open Data",
@@ -38,6 +39,7 @@
     "babel-jest": "^23.4.2",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "cross-env": "^5.2.0",
     "eslint": "^5.3.0",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
@@ -50,6 +52,7 @@
     "verbose": true,
     "testEnvironment": "node",
     "collectCoverage": true,
+    "setupTestFrameworkScriptFile": "<rootDir>src/utils/test-helpers/setup.js",
     "testPathIgnorePatterns": [
       "<rootDir>/dist/",
       "<rootDir>/node_modules/"

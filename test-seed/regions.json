@@ -1,0 +1,14 @@
+[
+  {
+    "name": "A Region",
+    "ref": "a-region"
+  },
+  {
+    "name": "B-Region",
+    "ref": "b-region"
+  },
+  {
+    "name": "C Region",
+    "ref": "c-region"
+  }
+]

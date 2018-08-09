@@ -48,7 +48,7 @@ export async function initializeServer() {
     },
   ]);
 
-  const files = glob.sync('./libs/**/*.routes.js', { cwd: __dirname });
+  const files = glob.sync('./**/*.routes.js', { cwd: __dirname });
 
   const routes = files.map(file => require(file).default); // eslint-disable-line
   server.route(flattenDeep(routes));

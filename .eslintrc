@@ -3,6 +3,9 @@
     "node": true,
     "jest": true
   },
+  "globals": {
+    "testServer": "true"
+  },
   "extends": "airbnb-base",
   "rules": {
     "no-console": "off",
