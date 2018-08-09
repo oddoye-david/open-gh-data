@@ -1,8 +1,9 @@
 import Joi from 'joi';
 
-export const paginationQueryParams = Joi.object({
+export const paginationQueryParams = extra => Joi.object({
   limit: Joi.string(),
   page: Joi.string(),
+  ...extra,
 });
 
 export const response = dataValidator => Joi.object({

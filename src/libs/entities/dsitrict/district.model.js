@@ -2,9 +2,9 @@ import mongoose, { Schema } from 'mongoose';
 import Joi from 'joi';
 import { removeFields } from '../../utils';
 
-const HIDDEN_FIELDS = ['_id', 'ref'];
+const HIDDEN_FIELDS = ['_id', 'ref', 'region_ref'];
 
-const RegionSchema = new Schema(
+const DistrictSchema = new Schema(
   {
     name: {
       type: String,
@@ -12,36 +12,43 @@ const RegionSchema = new Schema(
     capital: {
       type: String,
     },
-    area: {
-      type: Number,
-    },
-    population: {
-      type: Number,
-    },
     ref: {
       type: String,
       unique: true,
     },
+    region_ref: {
+      type: String,
+    },
   },
   {
     toJSON: {
+      virtuals: true,
       transform(_, doc) {
         const returnedDoc = { ...doc };
+        if (returnedDoc.region === null) {
+          delete returnedDoc.region;
+        }
         return removeFields(HIDDEN_FIELDS, returnedDoc);
       },
     },
   },
 );
 
-const RegionModel = mongoose.model('Region', RegionSchema);
+DistrictSchema.virtual('region', {
+  ref: 'Region',
+  localField: 'region_ref',
+  foreignField: 'ref',
+  justOne: true,
+});
+
+const DistrictModel = mongoose.model('District', DistrictSchema);
 
 export const validators = {
-  region: Joi.object({
+  district: Joi.object({
     name: Joi.string().required(),
     capital: Joi.string().required(),
-    area: Joi.number().required(),
-    population: Joi.number().required(),
+    region: Joi.object(),
   }),
 };
 
-export default RegionModel;
+export default DistrictModel;

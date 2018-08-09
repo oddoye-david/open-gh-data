@@ -3,8 +3,8 @@ export default class Service {
     this.model = model;
   }
 
-  async list(limit, page) {
-    const query = this.model.find({});
+  async list(limit, page, populate = []) {
+    let query = this.model.find({});
 
     if (limit) {
       query.limit(limit);
@@ -14,13 +14,30 @@ export default class Service {
       query.skip((page - 1) * limit);
     }
 
+    if (populate.length) {
+      query = populate.reduce((queryCursor, populateField) => {
+        queryCursor.populate(populateField);
+        return queryCursor;
+      }, query);
+    }
+
     const items = await query.exec();
 
     return items;
   }
 
-  async findById(id) {
-    const item = await this.model.findById(id);
+  async findById(id, populate = []) {
+    let query = this.model.findById(id);
+
+    if (populate.length) {
+      query = populate.reduce((queryCursor, populateField) => {
+        queryCursor.populate(populateField);
+        return queryCursor;
+      }, query);
+    }
+
+    const item = await query.exec();
+
     return item;
   }
 }

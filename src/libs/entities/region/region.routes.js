@@ -27,7 +27,7 @@ export default [
       },
       tags: ['api'],
       validate: {
-        query: paginationQueryParams,
+        query: paginationQueryParams(),
       },
     },
   },
