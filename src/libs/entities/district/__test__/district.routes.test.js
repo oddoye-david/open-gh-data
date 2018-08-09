@@ -14,6 +14,7 @@ describe('District routes tests', () => {
     );
     server = await initializeServer();
     await District.remove({});
+    await Region.remove({});
   });
 
   afterEach(async () => {
