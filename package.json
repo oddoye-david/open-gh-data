@@ -11,8 +11,7 @@
     "heroku-postbuild": "npm run build && npm run seed",
     "test": "NODE_ENV=test && jest",
     "test:watch": "NODE_ENV=test && jest --watch",
-    "test:routes": "NODE_ENV=test && jest --testPathPattern route",
-    "test:services": "NODE_ENV=test && jest --testPathPattern service",
+    "test:integration": "NODE_ENV=test && jest --testPathPattern integration",
     "test:unit": "NODE_ENV=test && jest --testPathPattern unit"
   },
   "keywords": [

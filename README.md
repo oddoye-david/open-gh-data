@@ -25,8 +25,8 @@ The Open Ghana Data project is a collection of endpoints to retrieve json-format
 ## How to run the test suite
 
 - To run the entire test suite, run `npm test`
-- To run service tests, run `npm test:services`
-- To run the route tests, run `npm test:routes`
+- To run integration tests, run `npm test:integration`
+- To run the unit tests, run `npm test:unit`
 
 ## Contributing
 
